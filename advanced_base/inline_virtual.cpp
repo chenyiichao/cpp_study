@@ -6,7 +6,9 @@ public:
     inline virtual void who(){
         cout << "I am Base" << endl;
     }
-    virtual ~Base(){}
+    virtual ~Base(){
+        cout << "~Base()" << endl;
+    }
 };
 
 class Derived : public Base {
@@ -14,6 +16,9 @@ public:
     inline void who() 
     {
         cout << "I am Derived" << endl;
+    }
+    ~Derived(){
+        cout << "~Derived()" << endl;
     }
 };
 
